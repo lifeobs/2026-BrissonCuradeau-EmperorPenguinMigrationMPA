@@ -1,0 +1,108 @@
+PROJECT FOLDER STRUCTURE
+
+project/
+|
++-- data/
+|   |
+|   +-- input/
+|   |   |
+|   |   +-- Argos Juv ALL.csv
+|   |   +-- Fishing Monthly.csv
+|   |   +-- [Sea-ice input files]
+|   |   +-- [Mixed Layer Depth (MLD) input files]
+|   |   +-- [MPA shapefiles]
+|   |
+|   +-- output/
+|       |
+|       +-- Argos Juv ALL + SI.csv
+|       +-- Argos Juv ALL + SI + MLD.csv
+|       +-- Argos Juv ALL + SI + MLD + MPAs.csv
+|       +-- Argos Juv ALL + SI + MLD + MPAs + Fish.csv
+|       +-- [Analysis outputs: tables, figures, summaries]
+|
++-- scripts/
+|
++-- 1 - Add_SeaIce_to_argos.R
++-- 2 - Add_mixed_layed_depth_to_argos.R
++-- 3 - Add_MPA_status_to_argos.R
++-- 4 - Add_Fishing_effort_overlap_to_argos.R
++-- 5 - Analysis.R
+
+WORKFLOW
+
+ORIGINAL TRACKING DATA
+|
+v
+Argos Juv ALL.csv
+|
+v
+[1 - Add_SeaIce_to_argos.R]
+|  Adds sea-ice information to tracking locations
+v
+Argos Juv ALL + SI.csv
+|
+v
+[2 - Add_mixed_layed_depth_to_argos.R]
+|  Adds mixed layer depth (MLD)
+v
+Argos Juv ALL + SI + MLD.csv
+|
+v
+[3 - Add_MPA_status_to_argos.R] <--- MPA shapefiles
+|  Assigns MPA status to tracking locations
+v
+Argos Juv ALL + SI + MLD + MPAs.csv
+|
+v
+[4 - Add_Fishing_effort_overlap_to_argos.R]
+|  <--- Fishing Monthly.csv
+|  Calculates fishing-effort overlap around tracking locations
+v
+Argos Juv ALL + SI + MLD + MPAs + Fish.csv
+|
+v
+[5 - Analysis.R]
+|
++-- Latitude patterns by month and colony
+|
++-- Seasonal patterns in fishing effort
+|
++-- Fishing effort and MPA overlap
+|
++-- Maximum distance from colony
+|
++-- Statistical tables, figures, and summaries
+
+SCRIPT SUMMARY
+
+1 - Add_SeaIce_to_argos.R
+INPUT:  Argos Juv ALL.csv + sea-ice data
+OUTPUT: Argos Juv ALL + SI.csv
+
+2 - Add_mixed_layed_depth_to_argos.R
+INPUT:  Argos Juv ALL + SI.csv + MLD data
+OUTPUT: Argos Juv ALL + SI + MLD.csv
+
+3 - Add_MPA_status_to_argos.R
+INPUT:  Argos Juv ALL + SI + MLD.csv + MPA shapefiles
+OUTPUT: Argos Juv ALL + SI + MLD + MPAs.csv
+
+4 - Add_Fishing_effort_overlap_to_argos.R
+INPUT:  Argos Juv ALL + SI + MLD + MPAs.csv
+Fishing Monthly.csv
+OUTPUT: Argos Juv ALL + SI + MLD + MPAs + Fish.csv
+
+5 - Analysis.R
+INPUT:  Processed tracking datasets as required by each analysis
+OUTPUT: Statistical results, tables, and figures
+
+NOTES
+
+Scripts 1–4 prepare and enrich the tracking data.
+
+Script 5 performs the statistical analyses.
+
+Not all analyses necessarily use the final processed dataset.
+
+Confirm the exact source filenames and output locations against the
+current R code before using this as a definitive project inventory.
