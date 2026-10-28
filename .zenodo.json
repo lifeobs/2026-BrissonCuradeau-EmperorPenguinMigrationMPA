@@ -4,11 +4,11 @@
   "description": "R scripts for the analyses presented in the associated article.",
   "access_right": "open",
   "license": "gpl-3.0-or-later",
-  "keywords": ["emperor penguin", "migration", "Movebank", "juvenile"],
+  "keywords": ["Aptenodytes forsteri", "Antarctica", "Fisheries", "WSMPA", "D1MPA", "Seabirds", "Southern Ocean"],
   "creators": [
   {
     "name": "Brisson Curadeau, Emile",
-    "affiliation": "Université de Montpellier, France",
+    "affiliation": "Centre d'Ecologie Fonctionnelle et Evolutive (CEFE UMR5175), Montpellier, France",
     "orcid": "0000-0001-5795-9915"
   }
 ],
