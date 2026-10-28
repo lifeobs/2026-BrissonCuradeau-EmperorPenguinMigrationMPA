@@ -1,0 +1,20 @@
+{
+  "title": "Code for: Twelve months at sea: Repeatable migration patterns of juvenile emperor penguins inform marine protection planning",
+  "upload_type": "software",
+  "description": "R scripts for the analyses presented in the associated article.",
+  "access_right": "open",
+  "license": "gpl-3.0-or-later",
+  "keywords": ["emperor penguin", "migration", "Movebank", "juvenile"],
+  "creators": [
+  {
+    "name": "Brisson Curadeau, Emile",
+    "affiliation": "Université de Montpellier, France",
+    "orcid": "0000-0001-5795-9915"
+  }
+],
+"related_identifiers": [
+  {"relation": "isSupplementTo", "identifier": "10.xxxx/doi-de-l-article", "scheme": "doi"},
+  {"relation": "references", "identifier": "10.5441/001/1.sg2s0f7q", "scheme": "doi"}
+],
+  "communities": [{"identifier": "lifeobs"}]
+}
